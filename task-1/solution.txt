@@ -1,0 +1,14 @@
+mkdir mohannad
+cd mohannad
+touch one two three four
+mkdir BAD
+cd BAD
+touch bad.txt
+mv one ~/Downloads
+cp one copy
+cd ~/mohannad
+nano two
+echo 1-hello OSC 2-hello OSC 3-hello OSC 4-hello OSC 5-hello OSC 6-hello OSC 7-hello OSC 8-hello OSC >> three
+mv three hello
+rm four
+rm -r BAD
