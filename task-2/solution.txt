@@ -1,0 +1,23 @@
+git config --global user.name elfalaah
+git config --global user.email mohannadms2004@hotmail.com
+cd ~
+git clone https://github.com/elfalaah/OSC-Summer-Training-Tasks
+cd OSC-Summer-Training-Tasks
+mkdir task-2
+cd task-2
+touch greeting.txt
+echo "hello world" >> greeting.txt
+cd ..
+git add .
+git commit -m "Added greeting"
+git branch intro
+git checkout intro
+cd task-2
+echo I Love Git >> greeting.txt
+cd ..
+git add .
+git commit -m "Added I Love Git"
+git checkout main
+git merge intro
+git tag -a v1
+git push origin main
