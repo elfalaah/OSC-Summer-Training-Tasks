@@ -1,0 +1,36 @@
+cd ~
+mkdir project_files
+cd prject_files
+mkdir reports logs data
+cd reports
+touch report1.md report2.md
+cd ~/project_files/logs
+touch system.log error.log file1.pdf file2.pdf
+cd ~/project_files/data
+touch data.csv info.txt
+nano data.csv
+cd ~/project_files/logs
+nano system.log
+cd ~/project_files/reports
+nano report1.md
+cd ~/project_files/logs
+tar cvf logs_backup.tar error.log file1.pdf file2.pdf system.log
+mv logs_backup.tar ~/project_files
+rm system.log error.log file1.pdf file2.pdf
+tar xvf ~/project_files/logs_backup.tar
+find ~ -name "*.md"
+find ~/project_files -name "*.log"
+find ~/project_files -name "file1.pdf"
+find ~/project_files -iname "*.pdf"
+find ~/project_files/logs -type f
+cd ..
+ln -s data/data.csv link_data.csv
+nano link_data.csv
+rm link_data.csv
+echo "Summary Start" > summary.txt
+date >> summary.txt
+wc -l < summary.txt | awk '{pirnt $1}' | tee -a summary.txt
+cat reports/report1.md | wc -w
+cat logs/system.log | wc -c >> summary.txt
+find project_files -type f -o -type d | wc -l >> summary.txt
+cat summary.txt
