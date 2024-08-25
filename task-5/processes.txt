@@ -1,0 +1,5 @@
+2526 bash
+3992 cut
+3989 ps
+3991 sort
+3990 tail

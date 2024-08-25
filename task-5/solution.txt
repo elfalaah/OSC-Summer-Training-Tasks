@@ -1,0 +1,2 @@
+cut -d "," -f 2 info.csv | sort | uniq
+ps | tail -n +2 | sort -k 4 | cut -d ' ' -f 4,10 > processes.txt
